@@ -1,0 +1,11 @@
+{
+  "name": "ego",
+  "owner": { "name": "Radiator" },
+  "plugins": [
+    {
+      "name": "ego",
+      "source": "./",
+      "description": "Elephant-Goldfish-Owl: a blind judge, tension detection and a Decisions record on top of EGM."
+    }
+  ]
+}
