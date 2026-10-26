@@ -1,0 +1,39 @@
+agents/tensions.md
+  s_3dbb91fe2ddca6::t_07dc8383bd97e5 1-45
+skills/ego-review/SKILL.md
+  s_3dbb91fe2ddca6::t_8bd5417974e14b 1-64
+agents/owl.md
+  s_3dbb91fe2ddca6::t_a5e24356981078 1-70
+skills/ego-resolve/SKILL.md
+  s_3dbb91fe2ddca6::t_cb2a63ac13083e 1-178
+.claude-plugin/marketplace.json
+  s_3dbb91fe2ddca6::t_2980b20656a99d 1-11
+.claude-plugin/plugin.json
+  s_3dbb91fe2ddca6::t_b241ea6ccef962 1-18
+LICENSE
+  s_3dbb91fe2ddca6::t_d241d03626aa2b 1-202
+README.md
+  s_3dbb91fe2ddca6::t_54d032de49863d 1-69
+docs/measures.md
+  s_3dbb91fe2ddca6::t_42d3882d7bf27c 1-24
+hooks/allow_plugin_reads.sh
+  s_3dbb91fe2ddca6::t_f0f825fb9d3308 1-21
+scripts/egm-root.sh
+  s_3dbb91fe2ddca6::t_a839235910d1a4 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "88d0af5a4a45772f5d7a9b7a9d8838f65ad2c142",
+  "prompts": {},
+  "sessions": {
+    "s_3dbb91fe2ddca6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdf4693f-5c4d-41a6-8c13-71cee87abb12",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jacob Martin <martinjaco@gmail.com>"
+    }
+  }
+}
