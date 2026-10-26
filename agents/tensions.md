@@ -1,9 +1,7 @@
 ---
 name: ego-tensions
 description: Reads a Goldfish review report and finds pairs of findings that ask for opposite changes to the same part of a document.
-tools: [Read, Grep, Glob]
-model: inherit
-omitClaudeMd: true
+license: Apache-2.0
 ---
 
 # Tension finder

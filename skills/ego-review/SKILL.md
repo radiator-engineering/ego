@@ -14,31 +14,37 @@ with four overrides. When EGM changes, this skill follows it.
 
 ## Step 0: Find EGM
 
-Run `"${CLAUDE_PLUGIN_ROOT}/scripts/egm-root.sh"`. It prints EGM's install
-root; call it `EGM_ROOT`. If it fails, show its message and stop.
+Read `../../docs/harnesses.md` first. It says how to find EGO's root
+(`EGO_ROOT`) and EGM's root (`EGM_ROOT`), and how to dispatch a named agent in
+your harness. In Claude Code, `EGO_ROOT` is `${CLAUDE_PLUGIN_ROOT}`.
 
-Read `EGM_ROOT/docs/claude.md`, then `EGM_ROOT/skills/egm_review/SKILL.md`.
-Follow that skill in this thread, with these rules for paths:
+Find `EGM_ROOT` as that guide says. If you cannot, tell the person EGO needs
+EGM installed in this harness, and stop.
 
-- In every EGM file, read `${CLAUDE_PLUGIN_ROOT}` as `EGM_ROOT`. EGM's personas
-  and rubrics live there, not in EGO.
-- In this file, `${CLAUDE_PLUGIN_ROOT}` is EGO's root.
-- Dispatch EGM reviewers by their agent names (`egm:egm-design` and the rest)
-  and EGO agents as `ego:ego-owl` and `ego:ego-tensions`.
+Read EGM's harness guide for your host (`EGM_ROOT/docs/claude.md`, or
+`EGM_ROOT/docs/codex.md` in Codex and ChatGPT), then
+`EGM_ROOT/skills/egm_review/SKILL.md`. Follow that skill in this thread, with
+these rules for paths:
+
+- In every EGM file, `${CLAUDE_PLUGIN_ROOT}`, "the plugin root" and relative
+  paths such as `agents/` and `resources/` mean `EGM_ROOT`. EGM's personas and
+  rubrics live there, not in EGO.
+- Dispatch EGM reviewers as EGM says, and EGO's agents (`ego-owl`,
+  `ego-tensions`) as `docs/harnesses.md` says.
 
 Where EGM and the overrides below disagree, the overrides win.
 
 ## Override 1: Tensions after every stage
 
 After EGM writes a stage's report and before resolution, dispatch
-`ego:ego-tensions` with the report path and `TargetFile`. Append its
+`ego-tensions` with the report path and `TargetFile`. Append its
 `## Tensions` block to the report. A tension skips the Elephant and the Owl and
 goes to the person as a call in `ego-resolve`.
 
 ## Override 2: Resolve with the Owl
 
 Wherever EGM says to invoke or follow `egm-resolve`, read
-`${CLAUDE_PLUGIN_ROOT}/skills/ego-resolve/SKILL.md` and follow it instead, with
+`EGO_ROOT/skills/ego-resolve/SKILL.md` and follow it instead, with
 the same `TargetFile`, range and findings, plus the stage's Tensions block.
 
 ## Override 3: Goldfish see the Decisions

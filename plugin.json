@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ego",
+  "version": "0.1.0",
+  "description": "Elephant-Goldfish-Owl: adds a blind judge, tension detection and a Decisions record to the Elephant-Goldfish Model (EGM).",
+  "author": {
+    "name": "Radiator"
+  },
+  "repository": "https://github.com/radiator-engineering/ego",
+  "license": "Apache-2.0"
+}

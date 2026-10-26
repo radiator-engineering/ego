@@ -10,6 +10,10 @@ description: >-
 
 # EGO: Resolve
 
+Read `../../docs/harnesses.md` first. It says how to find EGO's root
+(`EGO_ROOT`) and EGM's root (`EGM_ROOT`), and how to dispatch a named agent in
+your harness. In Claude Code, `EGO_ROOT` is `${CLAUDE_PLUGIN_ROOT}`.
+
 This skill replaces EGM's `egm-resolve`. It takes the same inputs and writes
 the same kind of report, with one change in who decides: the Elephant answers
 findings but never rules on critiques of its own draft. The Owl rules. The
@@ -59,8 +63,9 @@ A FIX goes straight to the report. It costs no further calls.
 ## Step 3: The Goldfish replies once
 
 For each CONTEST or REFRAME, dispatch a fresh instance of the lens that raised
-the finding (`egm:<lens>`, for example `egm:egm-design`). If the lens has no
-EGM agent, use a general subagent told to review from that lens. Send:
+the finding (for example `egm-design`; see `docs/harnesses.md` for the name in
+your harness). If the lens has no EGM persona, use a general subagent told to
+review from that lens. Send:
 
 > You are replying to a response to a finding raised in a review of
 > `<TargetFile>`. Read the span you need. Answer in at most 150 words.
@@ -93,7 +98,7 @@ Make them blind:
    `python3 -c "import secrets; print(secrets.choice('AB'))"` and give that
    letter to the position for the finding.
 
-Dispatch `ego:ego-owl` once per dispute, in parallel, with: the span as quoted
+Dispatch the Owl (`ego-owl`, persona `EGO_ROOT/agents/owl.md`) once per dispute, in parallel, with: the span as quoted
 text with `path:lines`, the finding, Position A, Position B, and the document's
 Decisions section. Parse its block. Map `HOLDS` back to the sides with the
 letter you drew.

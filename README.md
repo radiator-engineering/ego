@@ -26,7 +26,8 @@ escalate, and the Owl never writes the fix.
 
 ## Install
 
-EGO needs EGM. Install both:
+EGO runs in the same harnesses as EGM: Claude Code, Claude Cowork, Codex,
+Antigravity and ChatGPT. Install EGM first in the same harness. Claude Code:
 
 ```sh
 claude plugin marketplace add google/elephant-goldfish-model
@@ -35,9 +36,18 @@ claude plugin marketplace add radiator-engineering/ego
 claude plugin install ego@ego
 ```
 
+Codex:
+
+```sh
+codex plugin marketplace add google/elephant-goldfish-model && codex plugin add egm@egm
+codex plugin marketplace add radiator-engineering/ego && codex plugin add ego@ego
+```
+
+The others are in [docs/harnesses.md](docs/harnesses.md).
+
 ## Use
 
-- `/ego:ego-review <doc>`: EGM's staged review with the EGO changes. It reads
+- `/ego:ego-review <doc>` (Claude; other harnesses pick the `ego-review` skill): EGM's staged review with the EGO changes. It reads
   EGM's own review skill from the installed EGM, so EGM updates carry over.
 - `/ego:ego-resolve`: resolve any Goldfish report (for example one written by
   `/egm:egm-review`) with the Owl.
@@ -49,11 +59,13 @@ Drafting and brainstorming stay in EGM: `/egm:egm-brainstorm`,
 
 | Path | What it is |
 |---|---|
-| `agents/owl.md` | The Owl (`ego:ego-owl`). |
-| `agents/tensions.md` | The tension finder (`ego:ego-tensions`). |
+| `agents/owl.md` | The Owl (`ego-owl`). |
+| `agents/tensions.md` | The tension finder (`ego-tensions`). |
+| `.claude-plugin/agents/` | Claude adapters: read-only tools, no `CLAUDE.md`. |
 | `skills/ego-resolve/` | Resolution with the Owl; replaces `egm-resolve`. |
 | `skills/ego-review/` | EGM's review plus four overrides. |
 | `scripts/egm-root.sh` | Finds the installed EGM. |
+| `docs/harnesses.md` | Install, roots and agent names per harness. |
 | `docs/measures.md` | How to tell whether the Owl helps. |
 
 ## Limits

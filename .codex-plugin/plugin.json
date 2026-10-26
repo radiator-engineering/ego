@@ -1,0 +1,14 @@
+{
+  "name": "ego",
+  "version": "0.1.0",
+  "description": "Elephant-Goldfish-Owl: adds a blind judge, tension detection and a Decisions record to the Elephant-Goldfish Model (EGM).",
+  "repository": "https://github.com/radiator-engineering/ego",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Elephant-Goldfish-Owl",
+    "shortDescription": "A blind judge for EGM reviews",
+    "developerName": "Radiator",
+    "category": "Productivity"
+  }
+}

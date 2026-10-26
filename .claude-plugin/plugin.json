@@ -2,7 +2,9 @@
   "name": "ego",
   "version": "0.1.0",
   "description": "Elephant-Goldfish-Owl: adds a blind judge, tension detection and a Decisions record to the Elephant-Goldfish Model (EGM).",
-  "author": { "name": "Radiator" },
+  "author": {
+    "name": "Radiator"
+  },
   "repository": "https://github.com/radiator-engineering/ego",
   "license": "Apache-2.0",
   "hooks": {
@@ -10,9 +12,16 @@
       {
         "matcher": "Read|Grep|Glob",
         "hooks": [
-          { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/allow_plugin_reads.sh\"" }
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/allow_plugin_reads.sh\""
+          }
         ]
       }
     ]
-  }
+  },
+  "agents": [
+    "./.claude-plugin/agents/owl.md",
+    "./.claude-plugin/agents/tensions.md"
+  ]
 }
