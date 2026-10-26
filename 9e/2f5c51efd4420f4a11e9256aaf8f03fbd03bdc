@@ -1,0 +1,43 @@
+.agents/plugins/marketplace.json
+  s_3dbb91fe2ddca6::t_4f29cc9316bfa0 1-17
+.claude-plugin/agents/owl.md
+  s_3dbb91fe2ddca6::t_72a2b9fb1dee68 1-12
+.claude-plugin/agents/tensions.md
+  s_3dbb91fe2ddca6::t_8219913cd07178 1-12
+.claude-plugin/plugin.json
+  s_3dbb91fe2ddca6::t_256168d1a40a47 5-7,15-18,22-26
+.codex-plugin/plugin.json
+  s_3dbb91fe2ddca6::t_48ee3a7f98f509 1-14
+README.md
+  s_3dbb91fe2ddca6::t_756dda8fb9583e 29-30,39-47,50,62-64,68
+agents/owl.md
+  s_3dbb91fe2ddca6::t_74031a94c888be 4,32-34
+agents/tensions.md
+  s_3dbb91fe2ddca6::t_93d8e13cb511b1 4
+docs/harnesses.md
+  s_3dbb91fe2ddca6::t_849943dc7a0855 1-47
+plugin.json
+  s_3dbb91fe2ddca6::t_682ba5f0fcabcd 1-11
+scripts/egm-root.sh
+  s_3dbb91fe2ddca6::t_7e11bed9d7e67d 2,4-24,26
+skills/ego-resolve/SKILL.md
+  s_3dbb91fe2ddca6::t_acc82b65a6d4c5 13-16,66-68,101
+skills/ego-review/SKILL.md
+  s_3dbb91fe2ddca6::t_986ab680746b2c 17-19,21-22,24-33,40,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e2f5c51efd4420f4a11e9256aaf8f03fbd03bdc",
+  "prompts": {},
+  "sessions": {
+    "s_3dbb91fe2ddca6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdf4693f-5c4d-41a6-8c13-71cee87abb12",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jacob Martin <martinjaco@gmail.com>"
+    }
+  }
+}
