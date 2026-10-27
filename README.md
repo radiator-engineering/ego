@@ -51,6 +51,10 @@ The others are in [docs/harnesses.md](docs/harnesses.md).
   EGM's own review skill from the installed EGM, so EGM updates carry over.
 - `/ego:ego-resolve`: resolve any Goldfish report (for example one written by
   `/egm:egm-review`) with the Owl.
+- Reviewing a document someone else owns: pass `Mode: suggest` and
+  `Owner: <name>` to either skill. EGO leaves the document untouched. It
+  writes `suggested_edits.md` and `proposed_decisions.md` for the owner and
+  addresses the value calls to them.
 
 Drafting and brainstorming stay in EGM: `/egm:egm-brainstorm`,
 `/egm:egm-draft`.
@@ -65,6 +69,7 @@ Drafting and brainstorming stay in EGM: `/egm:egm-brainstorm`,
 | `skills/ego-resolve/` | Resolution with the Owl; replaces `egm-resolve`. |
 | `skills/ego-review/` | EGM's review plus four overrides. |
 | `scripts/egm-root.sh` | Finds the installed EGM. |
+| `scripts/blind-check.py` | Strips authorship leaks from Owl positions. |
 | `docs/harnesses.md` | Install, roots and agent names per harness. |
 | `docs/measures.md` | How to tell whether the Owl helps. |
 
