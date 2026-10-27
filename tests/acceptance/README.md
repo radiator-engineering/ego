@@ -8,13 +8,13 @@ Run validator unit tests:
 python3 -B -m unittest discover -s tests/acceptance -v
 ```
 
-Run the fixed blinding script without a model:
+Check that the skill names `scripts/blind-check.py`, then run that script without a model:
 
 ```sh
 python3 -B tests/acceptance/check_blinding_script.py skills/ego-resolve/SKILL.md
 ```
 
-The frozen baseline fails because it has no executable check. The candidate must remove two seeded leaks and report 2. A second check must report 0, and the evidence text must remain. This script test does not show what a model sends to the Owl.
+The checker finds the script relative to the supplied skill’s repository root. The script must be present, as added in implementation PR #1. The frozen baseline fails because it has neither the script nor its command. The candidate must remove two seeded leaks and report 2. A second check must report 0, and the evidence text must remain. This script test does not show what a model sends to the Owl.
 
 ## Evidence required from a real run
 
