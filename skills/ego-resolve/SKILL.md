@@ -2,10 +2,9 @@
 name: ego-resolve
 disable-model-invocation: true
 description: >-
-  Resolve Goldfish review findings with a blind judge. The Elephant answers
-  each finding with FIX, CONTEST or REFRAME; the Goldfish replies once; the Owl
-  rules on each dispute; value calls go to the person; rulings are recorded in
-  the document's Decisions section.
+  Use when a Goldfish review report (from EGM or EGO) has findings to settle
+  and the drafting side should not judge critiques of its own document,
+  including review of a document someone else owns.
 ---
 
 # EGO: Resolve

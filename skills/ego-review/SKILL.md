@@ -2,9 +2,9 @@
 name: ego-review
 disable-model-invocation: true
 description: >-
-  Run EGM's staged design-doc review with the EGO changes: tension detection
-  after each stage, the Owl in place of the Elephant's self-judgment, and a
-  stop rule that leaves no finding buried as an "accepted trade-off".
+  Use when a design document needs EGM's staged review, but disputed findings
+  should get a blind ruling rather than the author's own judgment, including
+  review of a document someone else owns.
 ---
 
 # EGO: Review
