@@ -1,0 +1,22 @@
+{
+  "suggest": {
+    "inputs": {"Mode": "suggest", "Owner": "Alex", "LineRange": "full file"},
+    "context": "The Elephant did not author target.md. Its sources are target.md and this scenario. The relay and durable queue exist and shipped in release 2; Alex owns launch approval. No production usage evidence was supplied.",
+    "findings": [
+      {"id": "F1", "lens": "egm-design", "severity": "Major", "span": "target.md:4-5", "finding": "The alert threshold exceeds the stated capacity. Change 120 to 90 requests per second.", "expected": "SUSTAIN"},
+      {"id": "F2", "lens": "egm-design", "severity": "Major", "span": "target.md:6", "finding": "A new durable queue must be built before launch.", "expected": "OVERRULE"},
+      {"id": "F3", "lens": "egm-design", "severity": "Major", "span": "target.md:7", "finding": "Use seven days instead of one day for rollout.", "expected": "ESCALATE"}
+    ],
+    "rerun": "Reopen the durable queue decision (expected D1) with the identical F2 finding, no new evidence. Preserve the first round artifacts separately. It must be listed under Already decided with that D id.",
+    "leak_probe": "In one real pre-blinding position include exactly these authorship leaks: my draft and egm-design. Save the pre-filter and actual outbound positions. Do not count the raw leak probe as blinded outbound text."
+  },
+  "concessions": {
+    "findings": [
+      {"id": "C1", "goldfish_reply": "CONCEDE: target.md:6 explicitly says the durable queue already shipped."},
+      {"id": "C2", "goldfish_reply": "CONCEDE: target.md:3 explicitly names Alex as launch approver."},
+      {"id": "R1", "goldfish_reply": "REBUT: a new queue is necessary despite target.md:6.", "expected_owl": "OVERRULE"}
+    ],
+    "note": "These are controlled reply inputs for a protocol integration test, not evidence of spontaneous model concessions. Dispatch a real Owl for R1 and preserve its full response."
+  },
+  "default": {"inputs": {"LineRange": "full file"}, "note": "Use the same fixture, findings, controlled replies, approval, date, and random-letter draws for baseline and candidate. Omit Owner and Mode entirely. Preserve both original outputs. Step 6 must end the turn; only then provide Apply with C1 unanswered."}
+}
