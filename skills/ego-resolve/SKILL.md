@@ -137,20 +137,14 @@ Make them blind:
    `python3 -c "import secrets; print(secrets.choice('AB'))"` and give that
    letter to the position for the finding.
 
-The leak check is fixed. Do not edit its patterns for a run. Save each
-position to a file, then run:
+The leak check is a fixed script. Do not edit its patterns for a run. Save
+each position to a file, then run:
 
 ```sh
-python3 - <position-file> <<'EOF'
-import re, sys
-p = sys.argv[1]
-leak = re.compile(r"\begm-[a-z0-9-]+|\b(goldfish|elephant|my draft|as the author|the reviewers?)\b", re.I)
-text = open(p).read()
-n = len(leak.findall(text))
-open(p, "w").write(re.sub(r"[ \t]{2,}", " ", leak.sub("", text)))
-print(n)
-EOF
+python3 EGO_ROOT/scripts/blind-check.py <position-file>
 ```
+
+It strips matches from the file in place and prints the count.
 
 Add the counts from the step 1 runs on both positions. That total is the
 dispute's blind-check result: `pass` if it is 0, `stripped <n>` otherwise.

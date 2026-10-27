@@ -69,6 +69,7 @@ Drafting and brainstorming stay in EGM: `/egm:egm-brainstorm`,
 | `skills/ego-resolve/` | Resolution with the Owl; replaces `egm-resolve`. |
 | `skills/ego-review/` | EGM's review plus four overrides. |
 | `scripts/egm-root.sh` | Finds the installed EGM. |
+| `scripts/blind-check.py` | Strips authorship leaks from Owl positions. |
 | `docs/harnesses.md` | Install, roots and agent names per harness. |
 | `docs/measures.md` | How to tell whether the Owl helps. |
 
